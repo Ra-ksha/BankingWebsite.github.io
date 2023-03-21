@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>money</title>
+</head>
+<style>
+    body{
+      background-color: grey;
+    }
+      
+      ul {
+list-style-type: none;
+margin: 0;
+padding: 9px 10px;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+
+li {
+float: right;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover:not(.active) {
+background-color: #f5f3f3;
+}
+
+
+h2 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+div.one {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-display: blue;
+}
+div.two {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-display: blue;
+}
+div.three {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-display: blue;
+}
+
+</style>
+<body>
+    <ul>
+        <li><a class="active" href="Transaction.html">TRANSACTION</a></li>      
+        <li><a href="Customer.html">CUSTOMER</a></li>
+        <li><a href="home01.html">HOME</a></li>
+        <li style="float:left"><a class="active" href="#about">BASIC BANKING SYSTEM</a></li>
+      </ul>
+      <div class="container"></div>
+      <p></p>
+    <h2>Transaction Details Of Customer</h2>
+    <div class="one">  From-Customer1: <br> <span id = "From-customer"></span> </div>
+    <br>
+    <div class="two">To-Customer2: <br> <span id = "To-customer"></span> </div>
+<br>
+    <div class="three">Amount: <br> <span id = "Amount-customer"></span> </div>
+
+    <h2>Congratulations Transaction Sucessful </h2>
+</p>
+</div>
+
+    <script>
+
+        const From= localStorage.getItem('From-customer');
+        const To=localStorage.getItem('To-customer');
+        const Amount=localStorage.getItem('Amount-customer');
+
+        document.getElementById('From-customer').textContent =From ;
+        document.getElementById('To-customer').textContent =To ;
+        document.getElementById('Amount-customer').textContent = Amount;
+
+    </script>
+
+
+      
+
+</body>
+</html>
